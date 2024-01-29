@@ -416,6 +416,21 @@ class Node:
         :return integer:
         """
         ...
+        x=self
+        y=self
+        lheight=1
+        rheight=1
+        while x.left != None:
+            lheight +=1
+            x=x.left
+        while y.right != None:
+            rheight +=1
+            y=y.right
+        if lheight>rheight:
+            return lheight
+        return rheight
+        
+            
 
     def unbalanced(self):
         """
