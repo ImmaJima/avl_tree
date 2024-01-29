@@ -439,6 +439,12 @@ class Node:
         :return boolean:
         """
         ...
+        x = get_height(self.left)
+        y = get_height(self.right)
+        b=(x-y)*(x-y)
+        if b > 1:
+            return True
+        return False
 
     @classmethod
     def balance(cls, x, y, z):
